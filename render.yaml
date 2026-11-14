@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: salesforce-desk-ayush-kumar481
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/objects
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: SF_LOGIN_URL
+        value: https://login.salesforce.com
+      - key: SF_CLIENT_ID
+        sync: false
+      - key: SF_CLIENT_SECRET
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true

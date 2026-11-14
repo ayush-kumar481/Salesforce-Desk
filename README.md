@@ -84,24 +84,16 @@ Open [http://localhost:5173](http://localhost:5173) and select **Log in with Sal
 
 ## Deploy on Render
 
-Push the project to a Git provider connected to Render, then create a **Web Service** with:
+The repository includes a Render Blueprint in `render.yaml`. In the Render Dashboard, choose **New → Blueprint**, connect the GitHub repository, and create the service. Render prompts for `SF_CLIENT_ID` and `SF_CLIENT_SECRET`; enter the External Client App credentials there. The Blueprint generates `SESSION_SECRET` and configures the build, start command, and production cookie settings.
 
-- **Build command:** `npm install && npm run build`
-- **Start command:** `npm start`
+After Render creates the service:
 
-Set these environment variables in Render:
+1. Copy the service's HTTPS URL, such as `https://salesforce-desk-ayush-kumar481.onrender.com`.
+2. In the Render service's environment settings, add `SF_CALLBACK_URL` with the value `https://YOUR-SERVICE.onrender.com/auth/callback`, using the actual service URL.
+3. In Salesforce Setup, update the External Client App callback URL to that exact same value and save.
+4. Redeploy the Render service, open its HTTPS URL, and log in again.
 
-| Variable | Value |
-| --- | --- |
-| `NODE_ENV` | `production` |
-| `COOKIE_SECURE` | `true` |
-| `SF_CLIENT_ID` | External Client App Consumer Key |
-| `SF_CLIENT_SECRET` | External Client App Consumer Secret, if required |
-| `SF_LOGIN_URL` | `https://login.salesforce.com` |
-| `SF_CALLBACK_URL` | `https://YOUR-SERVICE.onrender.com/auth/callback` |
-| `SESSION_SECRET` | A long, unique random value |
-
-After Render gives you the service URL, update the External Client App callback URL to match it exactly, save the app, and retry login on the deployed site. The app serves its built client and API from the same origin. `APP_URL` can be set to the service URL if needed.
+The app serves its built client and API from the same origin. See the [Render Blueprint guide](https://render.com/docs/blueprint-spec) for details. Render's free web services sleep after 15 minutes without inbound traffic and can take about a minute to wake. This demo stores sessions in memory, so a service restart requires signing in again. See [Render's free service details](https://render.com/docs/free).
 
 Render's free web services sleep after 15 minutes without inbound traffic and can take about a minute to wake. This demo stores sessions in memory, so a service restart requires signing in again. See [Render's free service details](https://render.com/docs/free).
 
