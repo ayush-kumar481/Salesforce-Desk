@@ -1,0 +1,231 @@
+@media (max-width:1050px) {
+  .sidebar {
+    width: 205px;
+  }
+  .main-area {
+    margin-left: 205px;
+  }
+  .topbar {
+    padding: 0 28px;
+  }
+  .page-content {
+    padding: 31px 28px 20px;
+  }
+  .heading-decoration {
+    margin-right: 15px;
+  }
+  .page-heading h1 {
+    font-size: 29px;
+  }
+  .toolbar {
+    padding: 0 14px;
+  }
+  .panel-topline {
+    padding: 13px 15px;
+  }
+  .search-box {
+    width: 160px;
+  }
+}
+
+@media (max-width:760px) {
+  .sidebar {
+    width: 58px;
+    padding: 16px 8px;
+  }
+  .brand {
+    padding: 0;
+    justify-content: center;
+  }
+  .brand>span:not(.brand-mark) {
+    display: none;
+  }
+  .side-section-label {
+    font-size: 0;
+    margin: 29px 0 8px;
+    text-align: center;
+  }
+  .object-label span {
+    display: none;
+  }
+  .nav-link {
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+  }
+  .nav-link>span {
+    display: none;
+  }
+  .sidebar-help,.sidebar-footer {
+    display: none;
+  }
+  .sidebar-spacer {
+    flex: 1;
+  }
+  .main-area {
+    margin-left: 58px;
+  }
+  .topbar {
+    height: 55px;
+    padding: 0 15px;
+  }
+  .top-date,.top-divider {
+    display: none;
+  }
+  .page-content {
+    padding: 25px 14px 15px;
+  }
+  .page-heading {
+    min-height: 112px;
+    margin-bottom: 20px;
+    padding: 0 3px;
+  }
+  .page-heading h1 {
+    font-size: 25px;
+  }
+  .page-heading p {
+    font-size: 10px;
+    max-width: 270px;
+    line-height: 1.5;
+  }
+  .heading-decoration {
+    transform: scale(.72);
+    transform-origin: right center;
+    margin-right: -13px;
+    width: 105px;
+  }
+  .panel-topline {
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px;
+  }
+  .panel-controls {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .select-wrap select {
+    min-width: 120px;
+    width: 100%;
+  }
+  .primary-button {
+    white-space: nowrap;
+  }
+  .panel-title {
+    gap: 8px;
+  }
+  .panel-title h2 {
+    font-size: 13px;
+  }
+  .panel-title p {
+    max-width: 150px;
+    line-height: 1.4;
+  }
+  .object-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .toolbar {
+    height: auto;
+    min-height: 48px;
+    gap: 8px;
+    padding: 8px 12px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .toolbar-left {
+    width: 100%;
+    gap: 9px;
+  }
+  .toolbar-right {
+    width: 100%;
+    gap: 6px;
+  }
+  .search-box {
+    flex: 1;
+    width: auto;
+  }
+  .filter-button {
+    padding: 0 8px;
+  }
+  .showing {
+    font-size: 9px;
+  }
+  .table-scroll table {
+    min-width: 750px;
+  }
+  .app-footer {
+    font-size: 8px;
+  }
+  .connect-empty {
+    height: 330px;
+    padding: 34px 12px 0;
+  }
+  .connect-empty h3 {
+    font-size: 15px;
+  }
+  .connect-empty p {
+    font-size: 9px;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .panel-footer {
+    padding: 0 11px;
+    font-size: 8px;
+  }
+  .pagination-note {
+    gap: 3px;
+  }
+  .footer-info {
+    gap: 4px;
+  }
+  .record-modal {
+    padding: 17px;
+  }
+  .form-grid,.detail-grid {
+    gap: 11px;
+  }
+  .connect-button {
+    padding: 7px 8px;
+    font-size: 9px;
+  }
+  .breadcrumb {
+    font-size: 10px;
+  }
+}
+
+@media (max-width:410px) {
+  .user-copy {
+    display: none;
+  }
+  .page-heading h1 {
+    font-size: 22px;
+  }
+  .heading-decoration {
+    transform: scale(.58);
+    width: 80px;
+    margin-right: -18px;
+  }
+  .panel-controls .primary-button {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .panel-controls .select-wrap select {
+    font-size: 9px;
+    min-width: 108px;
+  }
+  .panel-title p {
+    max-width: 112px;
+  }
+  .pagination-note {
+    font-size: 8px;
+  }
+  .form-grid,.detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .record-modal {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
