@@ -84,7 +84,7 @@ Open [http://localhost:5173](http://localhost:5173) and select **Log in with Sal
 
 ## Deploy on Render
 
-The repository includes a Render Blueprint in `render.yaml`. In the Render Dashboard, choose **New → Blueprint**, connect the GitHub repository, and create the service. Render prompts for `SF_CLIENT_ID` and `SF_CLIENT_SECRET`; enter the External Client App credentials there. The Blueprint generates `SESSION_SECRET` and configures the build, start command, and production cookie settings.
+The repository includes a Render Blueprint in `render.yaml`. In the Render Dashboard, choose **New → Blueprint**, connect the GitHub repository, and create the service. Render prompts for `SF_CLIENT_ID` and `SF_CLIENT_SECRET`; enter the External Client App credentials there. The Blueprint generates `SESSION_SECRET` and configures the build (including Vite's development dependency), start command, and production cookie settings.
 
 After Render creates the service:
 
